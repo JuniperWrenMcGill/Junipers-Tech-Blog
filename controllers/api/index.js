@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { myconfig } = require('../../config/connection.js');
+const userRoutes = require('./userRoutes.js');
 
 // Retrieves a single post by id
 router.get('/posts/:id', withAuth, async (req, res) => { 
@@ -90,5 +91,7 @@ router.put('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.use('/user', userRoutes);
 
 module.exports = router;

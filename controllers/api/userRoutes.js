@@ -3,7 +3,7 @@ const session = require('express-session'); // do I want / need to use this?
 const { User } = require('../../models');
 
 // Create a user
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
