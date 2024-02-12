@@ -1,0 +1,22 @@
+[
+    {
+      "user_id": 1,
+      "name": "The Doctor",
+      "email": "thedoctor@tardis.com",
+      "password": "sonicScrewdriver"
+    },
+    {
+      "user_id": 2,
+      "name": "Rose Tyler",
+      "email": "rosetyler@earth.com",
+      "password": "badWolf"
+    },
+    {
+      "user_id": 3,
+      "name": "Donna Noble",
+      "email": "donnanoble@earth.com",
+      "password": "allonsy"
+    }
+  ]
+  
+  
