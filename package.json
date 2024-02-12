@@ -14,8 +14,11 @@
     "dotenv": "^16.4.2",
     "env": "^0.0.2",
     "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
     "handlebars": "^4.7.8",
     "mysql2": "^3.9.1",
-    "sequelize": "^6.37.0"
+    "sequelize": "^6.37.0",
+    "session": "^0.1.0"
   }
 }
