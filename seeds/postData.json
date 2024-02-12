@@ -1,0 +1,20 @@
+[
+    {
+        "post_id": 1,
+        "title": "Embracing the Magic of Handlebars in Web Development",
+        "description": "I've recently dived into the world of web development and discovered the versatility of Handlebars over traditional HTML. Handlebars simplifies templating and enhances the dynamic rendering of content with ease.",
+        "user_id": 1
+    },
+    {
+        "post_id": 2,
+        "title": "Crafting Intuitive User Interfaces with React and Bootstrap",
+        "description": "As a frontend enthusiast, I can't help but appreciate the seamless integration of React.js and Bootstrap for responsive UI design.",
+        "user_id": 2
+    },
+    {
+        "post_id": 3,
+        "title": "Navigating the Cloud with MongoDB Atlas",
+        "description": "In my journey through backend development, I've found a reliable companion in MongoDB Atlas.",
+        "user_id":3
+    }
+]
