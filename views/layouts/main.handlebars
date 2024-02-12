@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Tech Blog</title>
+    <link rel="shortcut icon" href="/images/anothersTreasureLogo.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">The Tech Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only"></span></a>
+                    <a class="nav-item nav-link" href="#">Dashboard</a>
+                    <a class="nav-item nav-link" href="#">Login</a>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+    <footer>
+        <div class="footer">
+            <p class="footer-title">Thank you for contributing!</p>
+        </div>
+    </footer>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+
+</body>
+
+</html>
