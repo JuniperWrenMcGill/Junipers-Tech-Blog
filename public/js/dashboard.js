@@ -94,6 +94,7 @@ document
     .querySelector('.create-btn')
     .addEventListener('click', newFormHandler);
 
+    //  SHOWING CONSOLE ERROR
 document
     .querySelector('.delete-btn')
     .addEventListener('click', delButtonHandler);

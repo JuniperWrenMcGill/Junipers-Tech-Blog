@@ -50,13 +50,21 @@ router.post('/login', async (req, res) => {
 
 // Logout
 router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
+  try {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        console.log('User logged out successfully.');
+        res.status(204).end();
+      });
+    } else {
+      console.log('User attempted to log out without being logged in.');
+      res.status(401).json({ error: 'Unauthorized' });
+    }
+  } catch (error) {
+    console.error('Error during logout:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 module.exports = router;

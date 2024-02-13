@@ -21,6 +21,12 @@
                     <a class="nav-item nav-link active" href="/">Home <span class="sr-only"></span></a>
                     <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
                     <a class="nav-item nav-link" href="login">Login</a>
+
+                    {{#if logged_in}}
+                        <button class="nav-item nav-link btn" id="logout"><a href="/">Logout</a></button>
+                        <script src="/js/logout.js"></script>
+                    {{/if}}
+                    
                 </div>
             </div>
         </nav>

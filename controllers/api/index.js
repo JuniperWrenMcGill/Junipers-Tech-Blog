@@ -4,8 +4,10 @@ const withAuth = require('../../utils/auth');
 const { myconfig } = require('../../config/connection.js');
 const userRoutes = require('./userRoutes.js');
 
+
+
 // Retrieves a single post by id
-router.get('/posts/:id', withAuth, async (req, res) => { 
+router.get('/posts/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -16,9 +18,9 @@ router.get('/posts/:id', withAuth, async (req, res) => {
       ],
     });
 
-    const post = postData.get({ plain: true }); 
+    const post = postData.get({ plain: true });
 
-    res.render('posts', { 
+    res.render('posts', {
       ...post,
       logged_in: req.session.logged_in,
     });
@@ -72,10 +74,10 @@ router.put('/:id', withAuth, async (req, res) => {
         ...req.body,
         // title: req.body.title,
         // content: req.body.content,
-      }, 
+      },
       {
         where: {
-          post_id: req.params.id, 
+          post_id: req.params.id,
         },
       }
     );
@@ -91,6 +93,23 @@ router.put('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Logout route
+router.post('/logout', withAuth, (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(401).json({ message: 'Unauthorized' });
+    }
+  } catch (error) {
+    console.error('Error during logout:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 
 router.use('/user', userRoutes);
 
