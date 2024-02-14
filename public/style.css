@@ -11,6 +11,10 @@
     line-height: 1.6;
     background-color: #fff; /* White background */
     color: #333;
+    min-height: 100vh; /* Minimum height to center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Center content vertically */
   }
   
   /* Create a container with some padding */
@@ -41,7 +45,7 @@
   a:hover {
     text-decoration: underline;
   }
-   
+  
   /* Style for the blog post content */
   .post-content {
     font-size: 18px;
@@ -67,27 +71,16 @@
     color: #555;
   }
   
-  /* Apply styles to the footer */
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* Sleek black background */
-    padding: 10px;
-    color: #fff; /* White text */
-    text-align: center;
-  }
-  
   /* Apply styles to the navigation bar */
   .navbar {
     background-color: #333; /* Sleek black background */
     padding: 10px;
+    text-align: center; /* Center the navigation links horizontally */
   }
   
   .navbar a {
     color: #fff; /* White text */
-    margin-right: 15px;
+    margin: 0 15px; /* Adjust spacing between links */
     text-decoration: none;
   }
   
@@ -106,18 +99,11 @@
     color: #555;
   }
   
-  /* Exo 2 Font Styles */
-  /* .exo-2-<uniquifier> {
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  } */
-  
-  /* Card Styles */
-  .post-cards {
+ /* Card Styles */
+.post-cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;  /* Stack cards vertically */
+    align-items: center;     /* Center the cards horizontally */
     gap: 20px;
   }
   
@@ -126,6 +112,7 @@
     border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
+    width: 950px; /* Set a wider width for the cards */
   }
   
   .card:hover {
@@ -141,10 +128,23 @@
   
   .card h2 {
     margin-bottom: 10px;
-    color: #007bff;
+    color: #333;
   }
   
   .card p {
     color: #555;
   }
   
+  /* Apply styles to the footer */
+.footer {
+    background-color: #333; /* Sleek black background */
+    padding: 10px;
+}
+
+/* Apply styles to the footer title */
+.footer-title {
+    font-size: 16px; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* White text */
+    text-align: center;
+}
