@@ -3,148 +3,183 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Apply a basic style to the body */
-  body {
+}
+
+/* Apply a basic style to the body */
+body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #fff; /* White background */
+    background-color: #fff;
+    /* White background */
     color: #333;
-    min-height: 100vh; /* Minimum height to center content vertically */
+    min-height: 100vh;
+    /* Minimum height to center content vertically */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Center content vertically */
-  }
-  
-  /* Create a container with some padding */
-  .container {
+    justify-content: space-between;
+    /* Center content vertically */
+}
+
+/* Create a container with some padding */
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  /* Apply styles to headers */
-  h1, h2, h3, h4, h5, h6 {
+}
+
+/* Apply styles to headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 10px;
     color: #333;
-  }
-  
-  /* Apply styles to paragraphs */
-  p {
+}
+
+/* Apply styles to paragraphs */
+p {
     margin-bottom: 15px;
-    color: #555; /* Dark gray text */
-  }
-  
-  /* Apply styles to links */
-  a {
+    color: #555;
+    /* Dark gray text */
+}
+
+/* Apply styles to links */
+a {
     color: #ffffff;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
-  /* Style for the blog post content */
-  .post-content {
+}
+
+/* Style for the blog post content */
+.post-content {
     font-size: 18px;
     line-height: 1.8;
     color: #333;
-  }
-  
-  /* Apply styles to the blog post meta information */
-  .post-meta {
+}
+
+/* Apply styles to the blog post meta information */
+.post-meta {
     color: #777;
-  }
-  
-  /* Apply styles to lists */
-  ul, ol {
+}
+
+/* Apply styles to lists */
+ul,
+ol {
     margin-bottom: 15px;
-  }
-  
-  /* Apply styles to blockquotes */
-  blockquote {
+}
+
+/* Apply styles to blockquotes */
+blockquote {
     border-left: 4px solid #007bff;
     margin: 0 0 15px 20px;
     padding-left: 15px;
     color: #555;
-  }
-  
-  /* Apply styles to the navigation bar */
-  .navbar {
-    background-color: #333; /* Sleek black background */
+}
+
+/* Apply styles to the navigation bar */
+.navbar {
+    background-color: #333;
+    /* Sleek black background */
     padding: 10px;
-    text-align: center; /* Center the navigation links horizontally */
-  }
-  
-  .navbar a {
-    color: #fff; /* White text */
-    margin: 0 15px; /* Adjust spacing between links */
+    text-align: center;
+    /* Center the navigation links horizontally */
+}
+
+/* Apply styles to the navbar links */
+.navbar a {
+    color: #fff;
+    /* White text */
+    margin: 0 15px;
+    /* Adjust spacing between links */
     text-decoration: none;
-  }
-  
-  /* Apply styles to the header */
-  .header {
+}
+
+/* Apply styles to the navbar brand */
+.navbar-title {
+    color: #fff;
+    /* White text */
+    margin: 0 15px;
+    /* Adjust spacing between links */
+    text-decoration: none;
+    font-size: 34px;
+    /* Adjust the font size for the brand */
+    font-weight: bold;
+    /* Make the brand text bold */
+}
+
+/* Apply styles to the header */
+.header {
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  .header h1 {
+}
+
+.header h1 {
     color: #333;
     margin-bottom: 10px;
-  }
-  
-  .header p {
+}
+
+.header p {
     color: #555;
-  }
-  
- /* Card Styles */
+}
+
+/* Card Styles */
 .post-cards {
     display: flex;
-    flex-direction: column;  /* Stack cards vertically */
-    align-items: center;     /* Center the cards horizontally */
+    flex-direction: column;
+    /* Stack cards vertically */
+    align-items: center;
+    /* Center the cards horizontally */
     gap: 20px;
-  }
-  
-  .card {
+}
+
+.card {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
-    width: 950px; /* Set a wider width for the cards */
-  }
-  
-  .card:hover {
+    width: 950px;
+    /* Set a wider width for the cards */
+}
+
+.card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card a {
+}
+
+.card a {
     display: block;
     padding: 15px;
     color: #333;
     text-decoration: none;
-  }
-  
-  .card h2 {
+}
+
+.card h2 {
     margin-bottom: 10px;
     color: #333;
-  }
-  
-  .card p {
+}
+
+.card p {
     color: #555;
-  }
-  
-  /* Apply styles to the footer */
+}
+
+/* Apply styles to the footer */
 .footer {
-    background-color: #333; /* Sleek black background */
+    background-color: #333;
+    /* Sleek black background */
     padding: 10px;
 }
 
 /* Apply styles to the footer title */
 .footer-title {
-    font-size: 16px; /* Adjust the font size */
-    font-weight: bold; /* Make the text bold */
-    color: #fff; /* White text */
+    font-size: 16px;
+    /* Adjust the font size */
+    font-weight: bold;
+    /* Make the text bold */
+    color: #fff;
+    /* White text */
     text-align: center;
 }
