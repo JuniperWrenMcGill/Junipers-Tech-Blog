@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> The Tech Blog</title>
-    {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -23,8 +23,7 @@
                     <a class="nav-item nav-link" href="login">Login</a>
 
                     {{#if logged_in}}
-                        <button class="nav-item nav-link btn" id="logout"><a href="/">Logout</a></button>
-                        <script src="/js/logout.js"></script>
+                        <a class="nav-item nav-link btn" id="logout" href="/">Logout</a></button>
                     {{/if}}
                     
                 </div>

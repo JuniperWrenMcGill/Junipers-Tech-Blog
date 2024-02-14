@@ -1,0 +1,150 @@
+/* Reset some default styles for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply a basic style to the body */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff; /* White background */
+    color: #333;
+  }
+  
+  /* Create a container with some padding */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Apply styles to headers */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Apply styles to paragraphs */
+  p {
+    margin-bottom: 15px;
+    color: #555; /* Dark gray text */
+  }
+  
+  /* Apply styles to links */
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+   
+  /* Style for the blog post content */
+  .post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* Apply styles to the blog post meta information */
+  .post-meta {
+    color: #777;
+  }
+  
+  /* Apply styles to lists */
+  ul, ol {
+    margin-bottom: 15px;
+  }
+  
+  /* Apply styles to blockquotes */
+  blockquote {
+    border-left: 4px solid #007bff;
+    margin: 0 0 15px 20px;
+    padding-left: 15px;
+    color: #555;
+  }
+  
+  /* Apply styles to the footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Sleek black background */
+    padding: 10px;
+    color: #fff; /* White text */
+    text-align: center;
+  }
+  
+  /* Apply styles to the navigation bar */
+  .navbar {
+    background-color: #333; /* Sleek black background */
+    padding: 10px;
+  }
+  
+  .navbar a {
+    color: #fff; /* White text */
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  
+  /* Apply styles to the header */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    color: #555;
+  }
+  
+  /* Exo 2 Font Styles */
+  /* .exo-2-<uniquifier> {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+  
+  /* Card Styles */
+  .post-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .card p {
+    color: #555;
+  }
+  
