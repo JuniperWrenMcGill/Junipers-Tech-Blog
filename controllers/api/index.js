@@ -3,6 +3,7 @@ const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { myconfig } = require('../../config/connection.js');
 const userRoutes = require('./userRoutes.js');
+const postRoutes = require('./postRoutes.js');
 
 
 
@@ -44,7 +45,7 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // Deletes a post
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/posts/:id', withAuth, async (req, res) => {
   console.log('Request params:', req.params.id);
   try {
     const postData = await Post.destroy({
@@ -60,34 +61,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 
     res.status(200).json({ message: 'Post deleted successfully', deletedPost: postData });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-// Updates a post
-router.put('/:id', withAuth, async (req, res) => {
-  try {
-    const updatedPostData = await Post.update(
-      {
-        ...req.body,
-        // title: req.body.title,
-        // content: req.body.content,
-      },
-      {
-        where: {
-          post_id: req.params.id,
-        },
-      }
-    );
-
-    if (!updatedPostData[0]) {
-      res.status(404).json({ message: 'No post found with this id!' });
-      return;
-    }
-
-    res.status(200).json(updatedPostData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

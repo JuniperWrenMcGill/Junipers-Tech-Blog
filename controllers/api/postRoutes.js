@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Image } = require('../../models');
 const withAuth = require('../../utils/auth');
-const { myconfig } = require('../../config/config');
+const { myconfig } = require('../../config/connection.js');
 
 //Pulls up one post by id
 router.get('/posts/:id', withAuth, async (req, res) => { 
@@ -41,12 +41,12 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 //Delete a post
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/posts/:id', withAuth, async (req, res) => {
   console.log('req params', req.params.id);
   try {
     const postData = await Post.destroy({
       where: {
-        post_id: req.params.id,
+        post_id: req.params.post_id,
         user_id: req.session.user_id,
       },
     });
