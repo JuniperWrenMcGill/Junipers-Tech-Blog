@@ -297,3 +297,21 @@ blockquote {
     font-size: 16px;
     color: #333;
 }
+
+.my-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* Adjust width to be responsive and centered */
+    max-width: 950px; /* Limit maximum width */
+    height: 200px; /* Set height */
+    margin: 20px auto 50px; /* Center horizontally and set margin-bottom to 50px */
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #fff; /* White background */
+    font-family: 'Arial', sans-serif; /* Set font family */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Set text color */
+}
+
