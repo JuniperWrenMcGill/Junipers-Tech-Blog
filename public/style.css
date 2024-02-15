@@ -279,3 +279,21 @@ blockquote {
     font-size: 16px; /* Set font size */
     color: #333; /* Set text color */
 }
+
+.container.login,
+.container.signup {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    height: auto; /* Adjusted to 'auto' to accommodate content */
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
