@@ -1,86 +1,84 @@
-<div class="row">
-    <div class="col-auto">
-        <h2>Welcome, {{name}}!</h2>
-    </div>
-</div>
-
-{{!-- Form to update a blog post once the button is pushed --}}
-<div class="container update hide">
-    <div class="card text-bg-secondary mb-3 m-2" style="max-width: 80%">
-        <h3 class="card-header text-bg-secondary mb-3">UPDATE Blog:</h3>
-        <div class="card-body text-bg-light mb-3">
-            <form class="form update-form">
-                <div class="card-body text-bg-light mb-4">
-                    <div class="form-group">
-                        <label for="update-post-title">Post Title</label> <!-- Changed id to "update-post-title" -->
-                        <input class="form-input" type="text" id="update-post-title" name="post-title"
-                            placeholder="Post Title" />
-                    </div>
-                    <div class="form-group">
-                        <label for="update-post-desc">Item Description</label> <!-- Changed id to "update-post-desc" -->
-                        <textarea class="form-input" id="update-post-desc" name="post-desc"
-                            placeholder="Item Description"></textarea>
-                    </div>
-                    <div class="form-group m-2">
-                        <button type="submit" id="submit-update-btn" class="btn btn-primary"
-                            data-id="{{post.post_id}}">Submit Update</button>
-                    </div>
-                </div>
-            </form>
+<div class="container">
+    <div class="row">
+        <div class="col-auto">
+            <h2>Welcome, {{name}}!</h2>
         </div>
     </div>
-</div>
 
-{{!-- Create a new post form --}}
-<div class="container new post">
-    <div class="row mt-4 new-post">
-        <div class="col-md-6">
-            <h3>Create a New Post:</h3>
-            <form class="form new-post-form">
-                <div class="form-group">
-                    <label for="new-post-title">Post Title</label> <!-- Changed id to "new-post-title" -->
-                    <input class="form-input" type="text" id="new-post-title" name="post-title"
+    <!-- Update Blog Form -->
+    <div class="update post">
+        <div class="card txt-bg-sec mb-3 m-2" style="max-width: 100%">
+            <h3 class="card-hd txt-bg-sec mb-3">Update Blog Post:</h3>
+            <div class="card-bd txt-bg-lt mb-3">
+                <form class="update-form">
+                    <div class="card-bd txt-bg-lt mb-4">
+                        <div class="form-grp">
+                            <label for="update-post-title">Blog Post Title:</label>
+                            <input class="form-inp" type="text" id="update-post-title" name="post-title"
+                                placeholder="Post Title" />
+                        </div>
+                        <div class="form-grp">
+                            <label for="update-post-desc">Blog Post Content:</label>
+                            <textarea class="form-inp" id="update-post-desc" name="post-desc"
+                                placeholder="Type your thoughts here!" style="width: 100%; height: 200px;"></textarea>
+                        </div>
+                        <div class="form-grp m-2">
+                            <button type="submit" id="submit-update-btn" class="btn btn-prm"
+                                data-id="{{post.post_id}}">Submit Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create New Post Form -->
+    <div class="new-post">
+        <div class="col-md-6" style="max-width: 80%"></div>
+        <h3>Create a New Blog Post:</h3>
+        <div class="form-grp">
+            <form class="new-post-form">
+                <div class="form-grp">
+                    <label for="new-post-title">Blog Post Title:</label>
+                    <input class="form-inp" type="text" id="new-post-title" name="post-title"
                         placeholder="Post Title" />
                 </div>
-                <div class="form-group">
-                    <label for="new-post-desc">Item Description</label> <!-- Changed id to "new-post-desc" -->
-                    <textarea class="form-input" id="new-post-desc" name="post-desc"
-                        placeholder="Item Description"></textarea>
+                <div class="form-grp">
+                    <label for="new-post-desc">Blog Post Content:</label>
+                    <textarea class="form-inp" id="new-post-desc" name="post-desc"
+                        placeholder="Type your thoughts here!" style="width: 100%; height: 200px;"></textarea>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary create-btn">Create</button>
+                <div class="form-grp">
+                    <button type="submit" class="btn btn-prm create-btn">Create</button>
                 </div>
-            </form>
         </div>
+        </form>
     </div>
 </div>
+</div>
 
-{{#if posts.length}}
-<div class="container my post">
+<!-- My Posts Section -->
+<div class="my-post">
     <div class="col-md-6">
-        <h3>My Posts:</h3>
+        <h3>My Blog Posts:</h3>
+        {{#if posts.length}}
         {{#each posts as |post|}}
-        <div class="row mb-2 post-list stickyNote">
+        <div class="row">
             <div class="col-md-8">
                 <h4><a href="/posts/{{post.post_id}}">{{post.title}}</a></h4>
             </div>
-            <form method="post" class="image-form" enctype="multipart/form-data">
-                Upload an Image
-                <input type="file" name="files[]" multiple>
-                <input type="hidden" id="myInput" class="{{post.post_id}}" />
-                <input type="submit" value="Upload Files" name="submit" class="submit">
-            </form>
             <div class="col-md-4">
                 <button class="btn btn-sm update-btn" data-id="{{post.post_id}}">UPDATE</button>
-            </div>
-            <div class="col-md-4">
                 <button class="btn btn-sm delete-btn" data-id="{{post.post_id}}">DELETE</button>
             </div>
         </div>
         {{/each}}
+        {{else}}
+        <p>No posts found.</p>
+        {{/if}}
     </div>
 </div>
-{{/if}}
+</div>
 
 <!-- Local upload instantiation -->
 <script src="./js/dashboard.js"></script>

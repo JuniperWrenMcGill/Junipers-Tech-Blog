@@ -183,3 +183,82 @@ blockquote {
     /* White text */
     text-align: center;
 }
+
+/* Center and style the welcome heading on the dashboard */
+.row h2 {
+    text-align: center;
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Adjust color */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+/* Additional styling for the form headings */
+.container h3 {
+    font-size: 20px; /* Adjust font size */
+    color: #333; /* Adjust color */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+/* Styles for updating post cards */
+.container-update-post,
+.container-new-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* Adjust width to be responsive and centered */
+    max-width: 500px; /* Limit maximum width */
+    height: 200px; /* Set height */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #fff; /* White background */
+    font-family: 'Arial', sans-serif; /* Set font family */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Set text color */
+}
+
+
+.card.update-card:hover,
+.card.new-post-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust hover shadow */
+}
+
+.my-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.my-post .row {
+    width: 100%; /* Ensure the rows span the full width */
+}
+
+.my-post .row .col-md-8 {
+    width: 70%; /* Adjust width of the title column */
+}
+
+.my-post .row .col-md-4 {
+    width: 30%; /* Adjust width of the button column */
+}
+
+.my-post .row .col-md-8 h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.my-post .row .col-md-8 a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.my-post .row .col-md-8 a:hover {
+    text-decoration: underline;
+}
+
+.my-post .row .col-md-4 .btn {
+    margin-bottom: 5px; 
+}
