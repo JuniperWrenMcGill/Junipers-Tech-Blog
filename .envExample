@@ -1,5 +1,0 @@
-DB_NAME='techBlog_db'
-DB_USER='root'
-DB_PASSWORD='root'
-
-JAWSDB_URL= 'mysql://hfmqwh3bkmpmjobt:zj7cmoycm5e0fhvu@fnx6frzmhxw45qcb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mag5i9jr63fuedq8'
