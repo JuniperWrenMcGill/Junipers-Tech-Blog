@@ -15,7 +15,7 @@ Juniper's Tech Blog is a dynamic platform for sharing and discussing the latest 
 - **Responsive Design**: Ensures a seamless experience across various devices.
 
 ## Installation and Usage 
- You can visit, exlpore and contrubute by visiting [https://holdthisspace](hold this space). 
+ You can visit, exlpore and contrubute by visiting [https://juniperstechblog-69076c68fe28.herokuapp.com/](https://juniperstechblog-69076c68fe28.herokuapp.com/). 
 
 ## License
 
