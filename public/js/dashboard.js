@@ -2,8 +2,8 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector('#post-title').value.trim();
-    const description = document.querySelector('#post-desc').value.trim();
+    const title = document.querySelector('#new-post-title').value.trim();
+    const description = document.querySelector('#new-post-desc').value.trim();
 
     if (title && description) {
         try {
@@ -117,15 +117,19 @@ document
     .querySelector('.create-btn')
     .addEventListener('click', newFormHandler);
 
-//  SHOWING CONSOLE ERROR
-// Attach the event listener to the delete button(s)
-document.querySelectorAll('.delete-btn').forEach(button => {
-    button.addEventListener('click', delButtonHandler);
+document.addEventListener('DOMContentLoaded', () => {
+    const newPostForm = document.querySelector('.new-post-form');
+
+    if (newPostForm) {
+        newPostForm.addEventListener('submit', newFormHandler);
+    } else {
+        console.error('New post form not found');
+    }
 });
 
-document
-    .querySelector('.update-btn')
-    .addEventListener('click', updateFormHandler);
+// document
+//     .querySelector('.update-btn')
+//     .addEventListener('click', updateFormHandler);
 
 document
     .querySelector('#submit-update-btn')
