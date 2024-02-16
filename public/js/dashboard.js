@@ -134,6 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document
-    .querySelector('#submit-update-btn')
-    .addEventListener('click', updateButtonHandler);
+// document
+//     .querySelector('#submit-update-btn')
+//     .addEventListener('click', updateButtonHandler);
