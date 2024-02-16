@@ -68,9 +68,9 @@ const updateButtonHandler = async (event) => {
     createNewFormEl.classList.remove("hide");
 };
 
-// Delete a current post with improvements
+// Delete a current post
 const delButtonHandler = async (event) => {
-    // Ensure we're acting on elements with a 'data-id' attribute
+    // Ensure acting on elements with a 'data-id' attribute
     if (event.target.hasAttribute('data-id')) {
         // Confirm with the user before deletion
         const isConfirmed = confirm('Are you sure you want to delete this post?');
@@ -85,13 +85,12 @@ const delButtonHandler = async (event) => {
             const response = await fetch(`/api/posts/${id}`, {
                 method: 'DELETE',
             });
-            
+
             // console.log(response);
 
 
             if (response.ok) {
-                // remove the post from UI or refresh
-                // document.querySelector(`#post-${id}`).remove();
+                // refresh
                 document.location.replace('/dashboard'); 
             } else {
                 // Handle specific errors based on response status
@@ -117,6 +116,14 @@ document
     .querySelector('.create-btn')
     .addEventListener('click', newFormHandler);
 
+// Attach the event listener to the delete button(s)
+document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', delButtonHandler);
+});
+document
+    .querySelector('.create-btn')
+    .addEventListener('click', newFormHandler);
+
 document.addEventListener('DOMContentLoaded', () => {
     const newPostForm = document.querySelector('.new-post-form');
 
@@ -126,10 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('New post form not found');
     }
 });
-
-// document
-//     .querySelector('.update-btn')
-//     .addEventListener('click', updateFormHandler);
 
 document
     .querySelector('#submit-update-btn')

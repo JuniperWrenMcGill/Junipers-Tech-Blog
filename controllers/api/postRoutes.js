@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 const { myconfig } = require('../../config/connection.js');
 
 //Pulls up one post by id
-router.get('/posts/:id', withAuth, async (req, res) => { 
+router.get('/:id', withAuth, async (req, res) => { 
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -41,16 +41,16 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 //Delete a post
-router.delete('/posts/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   console.log('req params', req.params.id);
   try {
     const postData = await Post.destroy({
       where: {
-        post_id: req.params.post_id,
+        post_id: req.params.id,
         user_id: req.session.user_id,
       },
     });
-    
+    // console.log(postData);
 
     if (!postData) {
       res.status(404).json({ message: 'No post found with this id!' });
